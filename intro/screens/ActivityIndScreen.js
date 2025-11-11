@@ -1,18 +1,24 @@
+
+
 import { Text, StyleSheet, View, Button, ActivityIndicator} from 'react-native'
+
 import React, { useState } from 'react';
 
 
 export default function activityIndScreen(){
     const[loading, setLoading] = useState(false);
-
     const startLoading = () => {
         setLoading(true);
         setTimeout(()=> setLoading(false), 3000)
     };
 
-    if (loading){
+   
+   
+   
+    if (loading){ 
         return(
         <View style={styles.container}>
+        
             <View>
                 <ActivityIndicator
                 size="large"
@@ -25,6 +31,7 @@ export default function activityIndScreen(){
         </View>
         );
     }
+    
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Activity Indicator</Text>
@@ -33,6 +40,8 @@ export default function activityIndScreen(){
     )
     
 }
+
+
 
 const styles = StyleSheet.create({
     container:{
